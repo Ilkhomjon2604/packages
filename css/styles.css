@@ -13,8 +13,8 @@
   font-style: normal;
   font-weight: 400;
   src: local(""),
-       url("../fonts/montserrat-v18-latin-regular.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url("../fonts/montserrat-v18-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  url("../fonts/montserrat-v18-latin-regular.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */
+  url("../fonts/montserrat-v18-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 /* montserrat-700 - latin */
 @font-face {
@@ -22,8 +22,8 @@
   font-style: normal;
   font-weight: 700;
   src: local(""),
-       url("../fonts/montserrat-v18-latin-700.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url("../fonts/montserrat-v18-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  url("../fonts/montserrat-v18-latin-700.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */
+  url("../fonts/montserrat-v18-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 /* GLOBAL */
 html {
@@ -61,27 +61,36 @@ img {
   padding: 25px 0;
   background-image:var(--linear);
 }
-
-
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
 .btn-dark{
   width: 100%;
-  background-image:var(--linear);
-  border:none;
+  background:var(--linear);
+  border:1px solid var(--primery);
   border-radius: 6px;
   color:var(--white);
+  transition: .5s all ease-in-out;
 }
 .btn-dark:hover{
-  border: 1px solid #6D72DE;
-  background-color:#fff;
+  /* border: 1px solid #6D72DE; */
+  background:#fff;
   color:var(--primery);
 
 }
 .btn-light{
   width: 100%;
-  background-image:var(--white);
-  border: none;
+  background:var(--white);
+  border: 1px solid #fff;
   color:var(--primery);
   border-radius: 6px;
+  transition: .5s all ease-in-out;
 }
 
 .btn-light:hover{
@@ -128,10 +137,10 @@ img {
 }
 .payment-type-text {
   font-style: normal;
-font-weight: bold;
-font-size: 15px;
-line-height: 28px;
-opacity: 0.5;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 28px;
+  opacity: 0.5;
 }
 .payment-type-control {
   width: 56px;
@@ -139,6 +148,86 @@ opacity: 0.5;
   margin: 0 24px;
   background-image:var(--linear);
   border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
 }
 
-/* yumaloqni yasash kerak !!!!  */
+.circle{
+  position: absolute;
+  top: 2;
+  left: 2px;
+  width: 24px;
+  height: 24px;
+  border-radius:50%;
+  background-color: var(--white);
+  transform: translateX(3px);
+  transition: .4s all ease-in-out;
+}
+.input-switcher:checked + span{
+  transform: translateX(25px);
+}
+
+
+/* PACKAGES  */
+.main{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+.package {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  align-items: center;
+  padding: 30px;
+  background-color:#fff;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0px 20px 40px rgba(212, 210, 244, 0.5);
+
+}
+.package-type {
+}
+
+.active .hr{
+  background-color: var(--white);
+}
+.hr{
+  background-color:#6E728E;
+  width: 100%;
+  height: 1px;
+  opacity: 0.25;
+}
+.sum {
+  font-weight: bold;
+  font-size: 72px;
+  line-height: 71px;
+  letter-spacing: -2.16px;
+  color: #4A4D60;
+  margin-bottom: 32px;
+
+}
+.active .sum{
+  color: var(--white);
+}
+.package-discr {
+
+}
+.btn-dark {
+}
+.active {
+  padding: 55px 30px;
+  color:var(--white)
+}
+.btn-light {
+}
+
+a{
+  text-decoration: none;
+  color:var(--text-color);
+  padding: 14px 0 ;
+  text-align: center;
+}

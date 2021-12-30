@@ -17,16 +17,16 @@
       <h1>Our Pricing</h1>
 
       <div class="payment-type">
-        <p class="payment-type-text">Annually</p>
+        <p class="payment-type-text">Monthly</p>
 
         <label class="payment-type-control">
 
-          <input class="input-switcher visually-hidden" type="checkbox">
+          <input class="input-switcher visually-hidden" type="checkbox" onclick="check()">
 
           <span class="circle"></span>
         </label>
 
-        <p class="payment-type-text">Monthly</p>
+        <p class="payment-type-text">Annually</p>
       </div>
     </header>
 
@@ -34,7 +34,8 @@
     <div class="main">
       <div class="package">
         <h2 class="package-type">Basic</h2>
-        <div class="sum">19.99</div>
+        <div class="sum sum-monthly">19.99</div>
+        <div class="sum sum-anually">199.99</div>
         <div class="hr"></div>
         <p class="package-discr">500 GB Storage</p>
         <div class="hr"></div>
@@ -48,8 +49,9 @@
       </div>
 
       <div class="package active">
-        <h2 class="package-type">Basic</h2>
-        <div class="sum">24.99</div>
+        <h2 class="package-type">Professional</h2>
+        <div class="sum sum-monthly">24.99</div>
+        <div class="sum sum-anually">249.99</div>
         <div class="hr"></div>
         <p class="package-discr">1 TB Storage</p>
         <div class="hr"></div>
@@ -63,8 +65,9 @@
       </div>
 
       <div class="package">
-        <h2 class="package-type">Basic</h2>
-        <div class="sum">39.99</div>
+        <h2 class="package-type">Master</h2>
+        <div class="sum sum-monthly">39.99</div>
+        <div class="sum sum-anually">399.99</div>
         <div class="hr"></div>
         <p class="package-discr">2 TB Storage</p>
         <div class="hr"></div>
@@ -78,7 +81,10 @@
       </div>
 
     </div>
+    <img class="dcr" src="img/dcr.png" alt="">
+<img class="drcs" src="img/dcrs.png" alt="">
   </div>
+
 
   <script src="js/main.js"></script>
 </body>
